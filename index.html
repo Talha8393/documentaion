@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Technical Documentation Page </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <body>
+   
+    <main id="main-doc">
+  <section class="main-section" id="CSS_Introduction"><header>CSS Introduction</header> 
+  <p>What is CSS?
+    CSS stands for Cascading Style Sheets
+    CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files
+    </p>
+  <p>CSS Solved a Big Problem
+    HTML was NEVER intended to contain tags for formatting a web page!
+    
+    HTML was created to describe the content of a web page, like:
+    
+    <h1>This is a heading</h1>
+    
+    <p>This is a paragraph.</p>
+    
+    When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+    
+    To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+    
+    CSS removed the style formatting from the HTML page!</p>
+    <h3>CSS Example</h3>
+  <code>
+    body {
+      background-color: lightblue;
+    }
+    
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    
+    p {
+      font-family: verdana;
+      font-size: 20px;
+    }</code>
+   </section>
+  <section class="main-section" id="CSS_Syntax"><header>CSS Syntax</header>
+  <p>A CSS rule consists of a selector and a declaration block.
+    The selector points to the HTML element you want to style.
+
+The declaration block contains one or more declarations separated by semicolons.
+
+Each declaration includes a CSS property name and a value, separated by a colon.
+
+Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+  </p>
+  
+  <li>p is a selector in CSS (it points to the HTML element you want to style:paragraph)</li>
+  <li>color is a property, and red is the property value</li>
+  <li>text-align is a property, and center is the property value</li>
+  <p><h3>Example</h3>
+    In this example all elements will be center-aligned, with a red text color:</p>
+  <code>p {
+    color: red;
+    text-align: center;
+  }</code></section>
+  <section class="main-section" id="CSS_Selectors"><header>CSS Selectors</header>
+  <p>A CSS selector selects the HTML element(s) you want to style.</p>
+  <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+    We can divide CSS selectors into five categories:</p>
+  <li>Simple selectors (select elements based on name, id, class)</li>
+  <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+  <li>Pseudo-class selectors (select elements based on a certain state)</li>
+  <li>Pseudo-elements selectors (select and style a part of an element)</li>
+  <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+  <h3>Example</h3>
+  <code>p {
+    text-align: center;
+    color: red;
+  }</code></section>
+  <section class="main-section" id="How_to_Add_CSS"><header>How to Add CSS</header> 
+  <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+  <h2>Three Ways to Insert CSS</h2>
+  <p>There are three ways of inserting a style sheet:</p>
+  <li>External CSS</li>
+  <li>Internal CSS</li>
+  <li>Inline CSS</li>
+  <h2>External CSS</h2>
+  <p>With an external style sheet, you can change the look of an entire website by changing just one file!
+
+    Each HTML page must include a reference to the external style sheet file inside the element, inside the head section.</p>
+  <h3>Example</h3>
+  <code>
+    <h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+</code>
+<p>An external style sheet can be written in any text editor, and must be saved with a .css extension.
+
+    The external .css file should not contain any HTML tags.
+    
+    Here is how the "mystyle.css" file looks:</p>
+    <h3>"mystyle.css"</h3>
+    <code>body {
+        background-color: lightblue;
+      }
+      
+      h1 {
+        color: navy;
+        margin-left: 20px;
+      }
+      </code>
+      <h2>Internal CSS</h2>
+      <p> An internal style sheet may be used if one single HTML page has a unique style.
+
+        The internal style is defined inside the style element, inside the head section. </p>
+        <h2>Inline CSS</h2>
+        <p>An inline style may be used to apply a unique style for a single element.
+
+            To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+            <h3>Example</h3>
+            <code>
+                <h1 style="color:blue;text-align:center;">This is a heading</h1>
+                style="color:blue;text-align:center;">This is a heading
+                <p style="color:red;">This is a paragraph.</p>
+                style="color:red;">This is a paragraph.
+            </code>
+</section>
+  <section class="main-section" id="CSS_Colors"><header>CSS Colors</header>
+  <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+  <p>CSS Background Color
+    You can set the background color for HTML elements:</p>
+
+  <code><h1 style="background-color:DodgerBlue;">Hello World</h1>
+    <p style="background-color:Tomato;">Lorem ipsum...</p></code></section>
+    <section class="main-section" id="CSS_Comments"><header>CSS Comments</header>
+        <p>Comments are used to explain the code, and may help when you edit the source code at a later date.
+
+            Comments are ignored by browsers.
+            
+            A CSS comment is placed inside the style element, and starts with /* and ends with */:</p>
+    </section>
+    <section class="main-section" id="CSS_Backgrounds"><header>CSS Backgrounds</header>
+    <p>The background-color property specifies the background color of an element.</p>
+    <img src="https://www.freecodecamp.org/news/content/images/2021/08/image-24.png" alt="Background_colors">
+    </section>
+    <section class="main-section" id="CSS_Borders"><header>CSS Borders</header>
+    <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+    <h2>CSS Border Style</h2>
+    <p>The border-style property specifies what kind of border to display.
+
+        The following values are allowed:</p>
+<li>dotted - Defines a dotted border</li>
+<li>dashed - Defines a dashed border</li>
+<li>solid - Defines a solid border</li>
+<li>double - Defines a double border</li>
+
+</section>
+    <section class="main-section" id="CSS_Margins"><header>CSS Margins</header>
+    <p>Margins are used to create space around elements, outside of any defined borders.
+    The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+    </p>
+<img src="https://i.stack.imgur.com/E7RGt.png" alt="Margin_image">
+</section>
+    <section class="main-section" id="CSS_Paddings"><header>CSS Paddings</header>
+    <p>Padding is used to create space around an element's content, inside of any defined borders. 
+        The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+
+With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+    </p></section>
+    <section class="main-section" id="CSS_Fonts"><header>CSS Fonts</header>
+    <p>Choosing the right font for your website is important!
+
+        Font Selection is Important
+        Choosing the right font has a huge impact on how the readers experience a website.
+        
+        The right font can create a strong identity for your brand.
+        
+        Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.</p></section>
+    <section class="main-section" id="Reference"><header>Reference</header>
+    <li>All data in this page is taken from <a href="https://www.w3schools.com/css/default.asp">w3schools</a>  by Talha Azhar :)</li>
+</section>
+
+    </main>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <a href="#CSS_Introduction" class="nav-links">CSS Introduction</a>
+        <a href="#CSS_Syntax" class="nav-links">CSS Syntax</a>
+        <a href="#CSS_Selectors" class="nav-links">CSS Selectors</a>
+        <a href="#How_to_Add_CSS" class="nav-links">How to Add CSS</a>
+        <a href="#CSS_Colors" class="nav-links">CSS Colors</a>
+        <a href="#CSS_Comments" class="nav-links">CSS Comments</a>
+        <a href="#CSS_Backgrounds" class="nav-links">CSS Backgrounds</a>
+        <a href="#CSS_Borders" class="nav-links">CSS Borders</a>
+        <a href="#CSS_Margins" class="nav-links">CSS Margins</a>
+        <a href="#CSS_Paddings" class="nav-links">CSS Paddings</a>
+        <a href="#CSS_Fonts" class="nav-links">CSS Fonts</a>
+        <a href="#Reference" class="nav-links">Reference</a>
+
+           </nav>
+  </body>
+</html> 
